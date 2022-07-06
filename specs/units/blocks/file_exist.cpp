@@ -1,24 +1,25 @@
-#include <tux.hpp>
 #include <Unit.hpp>
+#include <Fs.hpp>
 
 using namespace Yubel;
+using namespace Tux;
 
 bool check_directory_not_exist()
 {
-    return directory_exists("/usr/bin/gcc");       	
-}
+    return Fs::exists("/usr/bin/gcc",fs::DIRS);
+}    
 bool check_directory_exist()
 {
-   return directory_exists(".");
+   return Fs::exists(".",fs::DIRS);
 }
 bool check_file_not_exist()
 {
-    return file_exists("aa");
+    return Fs::exists("aa",fs::FICS);
 }
 
 bool check_file_exist()
 {
-    return file_exists("/usr/bin/git");	
+    return Fs::exists("/usr/bin/git",fs::FICS);	
 }
 int main()
 {

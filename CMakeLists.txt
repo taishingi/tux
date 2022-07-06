@@ -11,4 +11,4 @@ macro(add lib)
     install(TARGETS ${lib} DESTINATION lib)
 endmacro()
 
-add(tux)
+add(Fs)
