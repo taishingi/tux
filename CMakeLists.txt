@@ -11,4 +11,10 @@ macro(add lib)
     install(TARGETS ${lib} DESTINATION lib)
 endmacro()
 
-add(Fs)
+add(fs)
+add(str)
+
+add_library(tux tux.hpp tux.cpp)
+target_link_libraries(tux fs str unit installation)
+install(FILES tux.hpp DESTINATION include)
+install(TARGETS tux DESTINATION lib)
