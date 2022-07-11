@@ -32,6 +32,16 @@ namespace Tux
 		 *
 		 **/
 		static bool exists(const string &filename, fs t);
+
+		/**
+		 *
+		 * @brief Get file the content
+		 *
+		 * @param filename The filename
+		 *
+		 * @return string
+		 *
+		 */
 		static string content(const string &filename);
 
 		/**

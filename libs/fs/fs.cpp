@@ -2,7 +2,6 @@
 
 using namespace Tux;
 
-
 /**
  *
  * @brief Check if a filename exist
@@ -16,13 +15,19 @@ string Fs::content(const string &filename)
 {
 	string data;
 	fstream File(filename);
-	if(File.is_open())
+	if (File.is_open())
 	{
 		File >> data;
 		File.close();
 	}
 	return data;
 }
+
+bool Fs::empty(const string &filename)
+{
+	return Fs::content(filename).empty();
+}
+
 bool Fs::exists(const string &filename, fs t)
 {
 	switch (t)
@@ -49,12 +54,7 @@ string content(const string &filename)
 	string data;
 	ofstream File(filename);
 	File.close();
-	return  data;
-}
-
-bool Fs::empty(const string &filename)
-{
-	return f::is_empty(filename.c_str());
+	return data;
 }
 
 bool Fs::remove(const string &filename)

@@ -1,10 +1,11 @@
 #include <tux.hpp>
+
 using namespace Yubel;
 using namespace Tux;
 
 bool check_empty_file()
 {
-    return Str::equals(Fs::content("aaaa"), "");
+    return Str::equals(Fs::content("aaaa"), "") && Fs::empty("aaaa");
 }
 bool check_create_file()
 {
