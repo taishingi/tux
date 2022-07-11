@@ -37,6 +37,18 @@ namespace Tux
         static bool equals(const string &expected, const string &actual);
 
         /**
+         * 
+         * @brief Check if the string is empty
+         *
+         * @param actual The string to check
+         * 
+         * @return true
+         * @return false
+         * 
+         */
+        static bool empty(const string &actual);
+
+        /**
          *
          * @brief check if two string are differents
          *

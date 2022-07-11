@@ -3,6 +3,10 @@
 using namespace Yubel;
 using namespace Tux;
 
+bool check_empty_string()
+{
+	return Str::empty("");
+}
 bool check_empty_file()
 {
     return Str::equals(Fs::content("aaaa"), "") && Fs::empty("aaaa");
@@ -36,5 +40,6 @@ int main()
         ->theory("The file must be exist", true, check_file_exist)
         ->theory("The diretory must be not exist", false, check_directory_not_exist)
         ->theory("The file must be has been created", true, check_create_file)
+        ->theory("The string must be empty", true, check_empty_string)
         ->end();
 }

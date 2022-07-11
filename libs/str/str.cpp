@@ -2,6 +2,10 @@
 
 using namespace Tux;
 
+bool Str::empty(const string &actual)
+{
+    return actual.empty();
+}
 bool Str::contains(const string &needle, const string &actual)
 {
     return actual.find(needle) != string::npos;
