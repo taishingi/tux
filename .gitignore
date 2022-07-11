@@ -9,16 +9,6 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
-yubel_*
 *.a
-cmake-build-debug
-.idea
-.cmake
-.vscode
+*.vscode
 build
-oh
-debug
-yugi
-dd
-null.d
-yubel
