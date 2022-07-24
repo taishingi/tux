@@ -1,10 +1,8 @@
 #ifndef TUX
 #define TUX
 
-#include <fs.hpp>
-#include <str.hpp>
-#include <unit.hpp>
-#include <installation.hpp>
-#include <generator.hpp>
+#include "../fs/fs.hpp"
+#include "../str/str.hpp"
+
 #endif
 
